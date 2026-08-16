@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f2ed">
+  <title>La Sevillana Studio · Demo</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/studio.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="studio-brand" href="/"><span>LS</span><div><strong>La Sevillana</strong><small>Studio</small></div></a>
+    <nav class="studio-nav" aria-label="Panel">
+      <button class="active" data-view="overview"><i>01</i>Resumen</button>
+      <button data-view="requests"><i>02</i>Solicitudes <b>5</b></button>
+      <button data-view="calendar"><i>03</i>Calendario</button>
+      <button data-view="clients"><i>04</i>Clientes</button>
+      <button data-view="content"><i>05</i>Contenido</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <span class="demo-pill">Modo demo</span>
+      <a href="/">← Volver a la web</a>
+    </div>
+  </aside>
+
+  <header class="studio-header">
+    <button class="sidebar-toggle" aria-label="Abrir navegación">☰</button>
+    <div><span>Panel de gestión</span><strong data-page-title>Resumen</strong></div>
+    <div class="owner"><span class="owner-dot">JL</span><div><strong>Propietario</strong><small>Administrador</small></div></div>
+  </header>
+
+  <main class="studio-main">
+    <section class="view active" id="overview" data-title="Resumen">
+      <div class="page-intro"><div><p>Domingo, 16 de agosto</p><h1>Buenas noches.</h1></div><span>Datos de muestra para la demo</span></div>
+      <div class="metrics">
+        <article><span>Solicitudes este mes</span><strong>12</strong><small>+4 vs. mes anterior</small></article>
+        <article><span>Pendientes de responder</span><strong>5</strong><small class="attention">Requieren atención</small></article>
+        <article><span>Eventos confirmados</span><strong>8</strong><small>Próximos 90 días</small></article>
+        <article><span>Invitados previstos</span><strong>1.420</strong><small>Eventos confirmados</small></article>
+      </div>
+      <div class="dashboard-grid">
+        <article class="panel requests-panel">
+          <div class="panel-head"><div><span>Solicitudes recientes</span><strong>Por responder</strong></div><button data-jump="requests">Ver todas ↗</button></div>
+          <div class="request-table">
+            <div class="request-row head"><span>Cliente</span><span>Evento</span><span>Fecha</span><span>Invitados</span><span>Estado</span></div>
+            <div class="request-row"><span><b>María & Carlos</b><small>Hoy · 19:42</small></span><span>Boda</span><span>14 jun 2027</span><span>180</span><span><i class="status new"></i>Nueva</span></div>
+            <div class="request-row"><span><b>Ana Romero</b><small>Hoy · 17:10</small></span><span>Comunión</span><span>2 may 2027</span><span>74</span><span><i class="status pending"></i>Pendiente</span></div>
+            <div class="request-row"><span><b>Grupo Astigi</b><small>Ayer · 13:22</small></span><span>Empresa</span><span>18 dic 2026</span><span>110</span><span><i class="status pending"></i>Pendiente</span></div>
+            <div class="request-row"><span><b>Lucía & Pablo</b><small>15 ago · 21:04</small></span><span>Boda</span><span>19 sep 2027</span><span>230</span><span><i class="status new"></i>Nueva</span></div>
+          </div>
+        </article>
+        <article class="panel next-event">
+          <div class="panel-head"><div><span>Próximo evento</span><strong>En 6 días</strong></div></div>
+          <div class="date-card"><span>SÁB</span><strong>22</strong><small>Agosto</small></div>
+          <h3>Boda · Elena & Álvaro</h3>
+          <dl><div><dt>Invitados</dt><dd>204</dd></div><div><dt>Horario</dt><dd>19:00</dd></div><div><dt>Catering</dt><dd>Confirmado</dd></div></dl>
+          <button class="outline-btn">Abrir ficha ↗</button>
+        </article>
+      </div>
+      <div class="dashboard-grid bottom-grid">
+        <article class="panel calendar-preview">
+          <div class="panel-head"><div><span>Agosto 2026</span><strong>Calendario</strong></div><button data-jump="calendar">Ver calendario ↗</button></div>
+          <div class="mini-calendar" id="mini-calendar"></div>
+        </article>
+        <article class="panel channel-panel">
+          <div class="panel-head"><div><span>Origen de solicitudes</span><strong>Últimos 30 días</strong></div></div>
+          <div class="channel"><span>Web</span><div><i style="width:72%"></i></div><b>72%</b></div>
+          <div class="channel"><span>Instagram</span><div><i style="width:19%"></i></div><b>19%</b></div>
+          <div class="channel"><span>Teléfono</span><div><i style="width:9%"></i></div><b>9%</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" id="requests" data-title="Solicitudes">
+      <div class="page-intro"><div><p>Captación</p><h1>Solicitudes.</h1></div><button class="primary-btn">+ Nueva solicitud</button></div>
+      <div class="toolbar"><div class="search">⌕ <input placeholder="Buscar cliente, fecha o teléfono"></div><div class="filters"><button class="active">Todas</button><button>Nuevas</button><button>Pendientes</button><button>Respondidas</button></div></div>
+      <div class="request-cards">
+        <article><div class="card-top"><span class="request-type">Boda</span><span class="status-tag new">Nueva</span></div><h3>María & Carlos</h3><p>“Nos gustaría hacer ceremonia civil y aperitivo en jardín. Tenemos una fecha orientativa para junio...”</p><div class="card-meta"><span>14 JUN 2027</span><span>180 invitados</span></div><footer><button>Ver solicitud</button><button>Responder ↗</button></footer></article>
+        <article><div class="card-top"><span class="request-type">Comunión</span><span class="status-tag pending">Pendiente</span></div><h3>Ana Romero</h3><p>“Buscamos un espacio para la comunión de nuestra hija, unas 70 personas aproximadamente...”</p><div class="card-meta"><span>02 MAY 2027</span><span>74 invitados</span></div><footer><button>Ver solicitud</button><button>Responder ↗</button></footer></article>
+        <article><div class="card-top"><span class="request-type">Empresa</span><span class="status-tag pending">Pendiente</span></div><h3>Grupo Astigi</h3><p>“Cena de Navidad para el equipo. Nos interesa conocer opciones de horario, montaje y catering...”</p><div class="card-meta"><span>18 DIC 2026</span><span>110 invitados</span></div><footer><button>Ver solicitud</button><button>Responder ↗</button></footer></article>
+        <article><div class="card-top"><span class="request-type">Boda</span><span class="status-tag new">Nueva</span></div><h3>Lucía & Pablo</h3><p>“Queremos una boda de tarde y nos gustaría aprovechar la zona exterior antes de la cena...”</p><div class="card-meta"><span>19 SEP 2027</span><span>230 invitados</span></div><footer><button>Ver solicitud</button><button>Responder ↗</button></footer></article>
+      </div>
+    </section>
+
+    <section class="view" id="calendar" data-title="Calendario">
+      <div class="page-intro"><div><p>Planificación</p><h1>Calendario.</h1></div><button class="primary-btn">+ Bloquear fecha</button></div>
+      <div class="calendar-large panel">
+        <div class="calendar-title"><button>←</button><strong>Agosto 2026</strong><button>→</button></div>
+        <div class="calendar-week"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>
+        <div class="calendar-grid" id="calendar-grid"></div>
+      </div>
+    </section>
+
+    <section class="view empty-view" id="clients" data-title="Clientes"><div><span>04</span><h1>Clientes.</h1><p>CRM de clientes habituales, histórico de eventos, notas y preferencias.</p><button class="primary-btn">Explorar demo</button></div></section>
+    <section class="view empty-view" id="content" data-title="Contenido"><div><span>05</span><h1>Contenido.</h1><p>Editar textos, imágenes, tipos de celebración y contenido visible en la web sin tocar código.</p><button class="primary-btn">Explorar demo</button></div></section>
+  </main>
+
+  <script src="/studio.js" defer></script>
+</body>
+</html>
