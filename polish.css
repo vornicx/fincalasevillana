@@ -1,0 +1,212 @@
+/* Commercial close pass — project-specific, deliberately avoids generic card grids. */
+
+.hero-photo {
+  background-image: url('https://images.unsplash.com/photo-1757283584283-7b0f22032265?auto=format&fit=crop&fm=jpg&q=84&w=2400');
+  background-position: center 54%;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(8,15,11,.83) 0%, rgba(8,15,11,.54) 43%, rgba(8,15,11,.18) 78%),
+    linear-gradient(0deg, rgba(8,15,11,.63) 0%, transparent 55%);
+}
+
+.hero-copy { width: min(820px, 74vw); }
+.hero-lead { max-width: 650px; }
+
+.media-photo-main {
+  background-image:
+    linear-gradient(rgba(16,25,19,.02), rgba(16,25,19,.10)),
+    url('https://images.unsplash.com/photo-1772127822514-682aeffcc0d3?auto=format&fit=crop&fm=jpg&q=86&w=2400');
+  background-position: center 58%;
+}
+
+.fact strong {
+  max-width: 72%;
+  font-size: clamp(30px, 2.8vw, 50px);
+  letter-spacing: -.035em;
+}
+
+.spaces { overflow: hidden; }
+.spaces-heading { max-width: 980px; }
+
+.space-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.36fr) minmax(310px, .64fr);
+  grid-template-areas:
+    "main specs"
+    "night night";
+  gap: clamp(22px, 2.5vw, 38px);
+  align-items: stretch;
+}
+
+.space-frame {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  background: #0f1a14;
+}
+
+.space-frame-main { grid-area: main; min-height: clamp(560px, 61vw, 850px); }
+.space-frame-night { grid-area: night; min-height: clamp(390px, 37vw, 560px); margin-top: clamp(30px, 4vw, 70px); }
+
+.space-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1), filter .6s ease;
+}
+
+.space-frame:hover .space-image { transform: scale(1.025); filter: saturate(1.05); }
+
+.space-image-garden {
+  background-image:
+    linear-gradient(0deg, rgba(7,14,10,.55), rgba(7,14,10,.02) 52%),
+    url('https://images.unsplash.com/photo-1772127822514-682aeffcc0d3?auto=format&fit=crop&fm=jpg&q=88&w=2200');
+  background-position: center 54%;
+}
+
+.space-image-night {
+  background-image:
+    linear-gradient(0deg, rgba(7,14,10,.68), rgba(7,14,10,.04) 58%),
+    url('https://images.unsplash.com/photo-1756267237174-e393e4de3be1?auto=format&fit=crop&fm=jpg&q=88&w=2400');
+  background-position: center 54%;
+}
+
+.space-frame figcaption {
+  position: absolute;
+  z-index: 2;
+  inset: auto clamp(24px, 3vw, 48px) clamp(25px, 3.4vw, 52px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  color: white;
+}
+
+.space-frame figcaption span {
+  flex: 0 0 auto;
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.63);
+}
+
+.space-frame figcaption strong {
+  max-width: 560px;
+  text-align: right;
+  font: 400 clamp(27px, 3vw, 46px)/1.04 var(--serif);
+  letter-spacing: -.025em;
+}
+
+.space-specs {
+  grid-area: specs;
+  border-top: 1px solid rgba(255,255,255,.22);
+  align-self: stretch;
+  padding: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.space-spec {
+  padding: 22px 0 24px;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+
+.space-spec span {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--sage);
+}
+
+.space-spec strong {
+  display: block;
+  max-width: 410px;
+  font: 400 clamp(18px, 1.55vw, 24px)/1.3 var(--serif);
+  color: rgba(255,255,255,.87);
+}
+
+.space-specs .button {
+  align-self: flex-start;
+  margin-top: auto;
+  transform: translateY(12px);
+}
+
+.editorial-photo {
+  background-image: url('https://images.unsplash.com/photo-1758810745370-1c3941dc8127?auto=format&fit=crop&fm=jpg&q=86&w=1800');
+  background-position: center 56%;
+}
+
+.prototype-dock {
+  position: fixed;
+  z-index: 29;
+  left: 18px;
+  bottom: 18px;
+  min-height: 54px;
+  padding: 7px 8px 7px 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(15,25,19,.93);
+  color: white;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 45px rgba(0,0,0,.16);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.prototype-dock > div { display: flex; flex-direction: column; line-height: 1.1; }
+.prototype-dock > div span { font-size: 7px; text-transform: uppercase; letter-spacing: .17em; color: rgba(255,255,255,.48); }
+.prototype-dock > div strong { margin-top: 5px; font-size: 10px; font-weight: 600; }
+.prototype-dock > a {
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 11px;
+  background: var(--paper);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 9px;
+  font-weight: 600;
+}
+.prototype-dock > a span { transition: transform .2s ease; }
+.prototype-dock > a:hover span { transform: translate(2px,-2px); }
+
+@media (max-width: 980px) {
+  .space-showcase {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "specs" "night";
+  }
+  .space-specs { padding-top: 10px; }
+  .space-specs .button { margin-top: 32px; transform: none; }
+  .space-frame-night { margin-top: 20px; }
+}
+
+@media (max-width: 680px) {
+  .hero-photo { background-position: 62% center; }
+  .hero { min-height: 790px; }
+  .hero-copy { width: 100%; }
+  .hero h1 { font-size: clamp(51px, 15.7vw, 72px); }
+  .hero-lead { font-size: 14px; line-height: 1.58; }
+  .fact { align-items: baseline; }
+  .fact strong { max-width: 66%; font-size: 37px; }
+  .spaces-heading { margin-bottom: 58px; }
+  .space-frame-main { min-height: 560px; }
+  .space-frame-night { min-height: 360px; }
+  .space-frame figcaption { inset: auto 20px 22px; display: block; }
+  .space-frame figcaption span { margin-bottom: 9px; display: block; }
+  .space-frame figcaption strong { display: block; text-align: left; font-size: 31px; }
+  .space-spec { padding: 19px 0 21px; }
+  .space-spec strong { font-size: 20px; }
+  .prototype-dock { left: 10px; bottom: 10px; min-height: 46px; padding: 5px 5px 5px 11px; gap: 10px; }
+  .prototype-dock > div span { display: none; }
+  .prototype-dock > div strong { margin: 0; font-size: 9px; max-width: 92px; }
+  .prototype-dock > a { min-height: 36px; padding: 0 10px; }
+  .floating-whatsapp { right: 10px; bottom: 10px; }
+}
