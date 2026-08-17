@@ -3,6 +3,11 @@ craftStylesheet.rel = 'stylesheet';
 craftStylesheet.href = '/craft.css?v=202608171253';
 document.head.appendChild(craftStylesheet);
 
+const factsStylesheet = document.createElement('link');
+factsStylesheet.rel = 'stylesheet';
+factsStylesheet.href = '/facts.css?v=202608171332';
+document.head.appendChild(factsStylesheet);
+
 const header = document.querySelector('[data-header]');
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav a');

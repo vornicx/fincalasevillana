@@ -1,0 +1,130 @@
+/* Facts component refinement — compact editorial rhythm, no card treatment. */
+
+@media (min-width: 981px) {
+  .facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: clamp(66px, 5vw, 86px) !important;
+  }
+
+  .fact,
+  .fact:nth-child(2),
+  .fact:nth-child(even) {
+    min-height: 148px !important;
+    padding: 24px 26px 22px 0 !important;
+    border: 0 !important;
+    border-top: 1px solid var(--line) !important;
+    border-right: 1px solid var(--line) !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 30px !important;
+  }
+
+  .fact:not(:first-child) {
+    padding-left: 26px !important;
+  }
+
+  .fact:last-child {
+    border-right: 0 !important;
+  }
+
+  .fact strong {
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: clamp(36px, 2.65vw, 49px) !important;
+    line-height: .94 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .fact span {
+    max-width: 155px !important;
+    margin: 0 !important;
+    font-size: 8.5px !important;
+    line-height: 1.48 !important;
+    letter-spacing: .105em !important;
+    color: rgba(23,32,25,.49) !important;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 980px) {
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 72px !important;
+  }
+
+  .fact,
+  .fact:nth-child(2),
+  .fact:nth-child(even) {
+    min-height: 142px !important;
+    padding: 22px 24px !important;
+    border: 0 !important;
+    border-top: 1px solid var(--line) !important;
+    border-right: 1px solid var(--line) !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 26px !important;
+  }
+
+  .fact:nth-child(even) { border-right: 0 !important; }
+  .fact:nth-child(3),
+  .fact:nth-child(4) { border-bottom: 1px solid var(--line) !important; }
+  .fact strong { font-size: 40px !important; }
+  .fact span { font-size: 8.5px !important; }
+}
+
+@media (max-width: 780px) {
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    padding: 0 20px 70px !important;
+  }
+
+  .fact,
+  .fact:nth-child(2),
+  .fact:nth-child(even) {
+    min-height: 124px !important;
+    padding: 18px 14px 18px 0 !important;
+    border: 0 !important;
+    border-top: 1px solid var(--line) !important;
+    border-right: 1px solid var(--line) !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+  }
+
+  .fact:nth-child(even) {
+    padding-left: 14px !important;
+    padding-right: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .fact:nth-child(3),
+  .fact:nth-child(4) {
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  .fact strong {
+    font-size: clamp(29px, 9.4vw, 36px) !important;
+    line-height: .94 !important;
+  }
+
+  .fact span {
+    max-width: 125px !important;
+    font-size: 7.5px !important;
+    line-height: 1.45 !important;
+    letter-spacing: .095em !important;
+    color: rgba(23,32,25,.5) !important;
+  }
+}
