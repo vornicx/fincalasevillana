@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/polish.css">
+  <link rel="stylesheet" href="/brand.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,9 +43,9 @@
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="header" data-header>
-    <a class="logo" href="#inicio" aria-label="Finca La Sevillana, inicio">
-      <span class="logo-monogram" aria-hidden="true">LS</span>
-      <span class="logo-copy"><strong>Finca La Sevillana</strong><small>Écija · Sevilla</small></span>
+    <a class="wordmark" href="#inicio" aria-label="Finca La Sevillana, inicio">
+      <strong>Finca La Sevillana</strong>
+      <small>Écija · Sevilla</small>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
       <span></span><span></span>
@@ -59,13 +60,16 @@
   </header>
 
   <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="hero-photo" role="img" aria-label="Celebración al aire libre durante la noche"></div>
+    <section class="hero hero-brand" id="inicio">
+      <div class="hero-photo" role="img" aria-label="Celebración elegante al aire libre durante la noche"></div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow light">Bodas · Comuniones · Eventos · Écija</p>
-        <h1>Todo el día.<br><em>En un mismo lugar.</em></h1>
-        <p class="hero-lead">Jardín para recibir, salón climatizado para reunir hasta 400 comensales y la libertad de elegir el catering que encaje con vuestra celebración.</p>
+        <p class="eyebrow light">Bodas · Celebraciones · Écija</p>
+        <div class="hero-branding">
+          <span class="hero-kicker">Finca de celebraciones</span>
+          <h1>Finca<br><em>La Sevillana</em></h1>
+        </div>
+        <p class="hero-lead">Jardín para recibir, salón climatizado para reunir hasta 400 comensales y la libertad de elegir el catering que mejor encaje con vuestra celebración.</p>
         <div class="hero-actions">
           <a class="button button-light" href="#disponibilidad">Consultar una fecha</a>
           <a class="link-arrow light-link" href="#espacios">Ver los espacios <span aria-hidden="true">↘</span></a>
@@ -81,24 +85,56 @@
 
     <section class="statement section" id="finca">
       <div class="section-label">01 · La finca</div>
-      <div class="statement-grid">
+      <div class="statement-grid enhanced-grid">
         <div class="statement-title reveal">
           <p class="eyebrow">Celebrando en Écija desde 2005</p>
-          <h2>Una finca preparada<br><em>para que el plan fluya.</em></h2>
+          <h2>Un lugar preparado<br><em>para que todo encaje.</em></h2>
         </div>
         <div class="statement-copy reveal delay-1">
-          <p class="lead">Llegar, recibir a los invitados, disfrutar del exterior y pasar al salón sin cambiar de escenario.</p>
-          <p>Finca La Sevillana reúne zona ajardinada, salón climatizado, parking privado y libertad para elegir catering. Lo esencial para plantear cada celebración con margen y sin encajarla en una fórmula cerrada.</p>
+          <p class="lead">Recibir a los invitados en el exterior, pasar al salón y vivir la celebración completa sin cambiar de lugar.</p>
+          <p>Finca La Sevillana reúne amplitud, comodidad y flexibilidad: una base clara para bodas, comuniones y eventos privados con personalidad propia.</p>
           <a class="link-arrow" href="#espacios">Recorrer la finca <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+
+      <div class="intro-visual reveal delay-1">
+        <article class="intro-photo-card">
+          <div class="intro-photo" role="img" aria-label="Mesa elegante preparada para una celebración"></div>
+          <div class="intro-photo-copy">
+            <span>Ambiente</span>
+            <strong>Un entorno pensado para acompañar cada momento de la celebración.</strong>
+          </div>
+        </article>
+        <div class="intro-highlights">
+          <article>
+            <span>01</span>
+            <strong>Jardín para la bienvenida</strong>
+            <p>Un exterior pensado para empezar la celebración con otro ritmo.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Salón amplio y climatizado</strong>
+            <p>Capacidad interior para hasta 400 comensales con mayor comodidad.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Parking privado y acceso fácil</strong>
+            <p>La llegada y la salida resultan más cómodas para invitados y proveedores.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Libertad para elegir catering</strong>
+            <p>Más margen para adaptar la celebración al estilo de cada cliente.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="media-feature section flush-top">
-      <div class="media-photo media-photo-main reveal" role="img" aria-label="Montaje de una celebración en jardín"></div>
+      <div class="media-photo media-photo-main reveal" role="img" aria-label="Montaje de celebración en jardín"></div>
       <div class="media-note reveal delay-1">
         <span>La llegada</span>
-        <p>El exterior permite empezar con otro ritmo: bienvenida, aperitivo, fotos y conversación antes de sentarse a la mesa.</p>
+        <p>El exterior permite recibir, brindar y alargar el aperitivo antes de pasar al salón.</p>
       </div>
     </section>
 
@@ -173,16 +209,21 @@
       </div>
     </section>
 
-    <section class="editorial section">
+    <section class="editorial section editorial-split">
       <div class="editorial-photo reveal" role="img" aria-label="Detalle cuidado de una mesa para celebración"></div>
       <div class="editorial-copy reveal delay-1">
         <span class="quote-mark">“</span>
-        <blockquote>Una buena finca no obliga a elegir entre amplitud y libertad.</blockquote>
-        <p>Aquí la base ya está resuelta: capacidad, exterior, acceso y margen para decidir cómo queréis plantear la celebración.</p>
+        <blockquote>Un lugar con margen para celebrar a vuestra manera, de la llegada al último baile.</blockquote>
+        <p>Jardín, salón y servicios se combinan para que cada celebración pueda tener su propio ritmo sin salir de la finca.</p>
+      </div>
+      <div class="editorial-sidecard reveal delay-2">
+        <span>Desde 2005</span>
+        <strong>Celebraciones en Écija</strong>
+        <p>Un espacio amplio y flexible para bodas, comuniones y eventos privados, con capacidad, exterior y acceso resueltos.</p>
       </div>
     </section>
 
-    <section class="availability section" id="disponibilidad">
+    <section class="availability section availability-refined" id="disponibilidad">
       <div class="availability-intro reveal">
         <div class="section-label">04 · Disponibilidad</div>
         <p class="eyebrow">¿Tenéis una fecha en mente?</p>
@@ -195,6 +236,10 @@
       </div>
 
       <form class="form reveal delay-1" id="availability-form">
+        <div class="form-topline">
+          <span>Consulta rápida</span>
+          <strong>Finca La Sevillana · Écija</strong>
+        </div>
         <div class="form-grid">
           <label><span>Nombre</span><input type="text" name="name" autocomplete="name" required placeholder="Vuestro nombre"></label>
           <label><span>Teléfono</span><input type="tel" name="phone" autocomplete="tel" required placeholder="600 000 000"></label>
@@ -228,11 +273,11 @@
 
   <footer class="footer">
     <div class="footer-top">
-      <a class="footer-brand" href="#inicio"><span>LS</span><div><strong>Finca La Sevillana</strong><small>Celebraciones · Écija</small></div></a>
+      <a class="footer-wordmark" href="#inicio"><strong>Finca La Sevillana</strong><small>Celebraciones · Écija</small></a>
       <p>Un lugar para reunir a todos.<br>Y hacer el día vuestro.</p>
     </div>
     <div class="footer-nav">
-      <div><span>Explorar</span><a href="#finca">La finca</a><a href="#celebraciones">Celebraciones</a><a href="#espacios">Espacios</a></div>
+      <div><span>Explorar</span><a href="#finca">La finca</a<a href="#celebraciones">Celebraciones</a><a href="#espacios">Espacios</a></div>
       <div><span>Contacto</span><a href="tel:+34607860292">607 860 292</a><a href="https://www.instagram.com/fincalasevillana/" target="_blank" rel="noopener">Instagram ↗</a><a href="#disponibilidad">Consultar fecha</a></div>
       <div><span>Gestión</span><a href="/studio.html">Acceso propietario ↗</a></div>
     </div>
