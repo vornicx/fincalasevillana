@@ -139,9 +139,7 @@
   margin-bottom: 24px;
   border-bottom: 1px solid var(--line);
 }
-.form-topline strong {
-  font-size: 24px;
-}
+.form-topline strong { font-size: 24px; }
 
 .footer-wordmark strong { font-size: clamp(28px, 2.8vw, 40px); line-height: .98; }
 .footer-wordmark small { margin-top: 5px; }
@@ -153,14 +151,156 @@
 }
 
 @media (max-width: 980px) {
-  .nav .wordmark,
   .header .wordmark { position: relative; z-index: 3; }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-100%);
+    transition:
+      transform .45s cubic-bezier(.65,0,.2,1),
+      opacity .24s ease,
+      visibility 0s linear .45s;
+  }
+  .menu-open .nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    transition-delay: 0s;
+  }
 }
 
-@media (max-width: 680px) {
-  .wordmark strong { font-size: 19px; }
+@media (max-width: 780px) {
+  .header {
+    height: 72px;
+    padding: 0 16px 0 20px;
+    border-bottom-color: rgba(255,255,255,.11);
+  }
+  .header.scrolled {
+    height: 68px;
+    background: rgba(241,238,231,.975);
+    border-color: rgba(23,32,25,.10);
+    box-shadow: 0 1px 0 rgba(23,32,25,.035);
+    backdrop-filter: blur(18px);
+  }
+  .wordmark { gap: 0; }
+  .wordmark strong {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -.04em;
+  }
   .wordmark small { display: none; }
-  .hero-kicker { margin-bottom: 14px; }
+  .nav-toggle {
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+  }
+  .nav-toggle span {
+    width: 22px;
+    margin: 5.5px auto;
+  }
+  .nav {
+    padding: 108px 20px 48px;
+    gap: 22px;
+  }
+  .nav a { font-size: 36px; }
+  .nav .nav-cta {
+    margin-top: 26px;
+    min-height: 46px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: max(760px, 100svh);
+    padding: 116px 20px 56px;
+    align-items: flex-end;
+  }
+  .hero-photo {
+    background-position: 59% center;
+    transform: scale(1.035);
+    animation: none;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(7,13,9,.48) 0%, rgba(7,13,9,.16) 32%, rgba(7,13,9,.42) 62%, rgba(7,13,9,.90) 100%),
+      linear-gradient(90deg, rgba(7,14,10,.44) 0%, rgba(7,14,10,.08) 100%);
+  }
+  .hero-brand .hero-copy {
+    width: 100%;
+    max-width: 370px;
+  }
+  .hero-copy .eyebrow {
+    margin-bottom: 15px;
+    font-size: 9px;
+    letter-spacing: .28em;
+    color: rgba(255,255,255,.72);
+  }
+  .hero-branding { margin-bottom: 16px; }
+  .hero-kicker {
+    margin-bottom: 13px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    backdrop-filter: none;
+    font-size: 8px;
+    letter-spacing: .24em;
+    color: rgba(255,255,255,.66);
+  }
+  .hero-kicker::after {
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 1px;
+    margin-left: 12px;
+    vertical-align: middle;
+    background: rgba(255,255,255,.38);
+    transform: translateY(-1px);
+  }
+  .hero-brand h1 {
+    margin: 0 0 20px;
+    font-size: clamp(46px, 13.7vw, 58px);
+    line-height: .89;
+    letter-spacing: -.045em;
+  }
+  .hero-brand h1 em {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .hero-lead {
+    width: 100%;
+    max-width: 342px;
+    margin-bottom: 26px;
+    font-size: 14px;
+    line-height: 1.62;
+    color: rgba(255,255,255,.82);
+  }
+  .hero-actions {
+    align-items: flex-start;
+    gap: 17px;
+  }
+  .hero-actions .button {
+    min-height: 52px;
+    padding: 0 23px;
+    font-size: 11px;
+  }
+  .hero-actions .link-arrow {
+    gap: 12px;
+    padding-bottom: 7px;
+    font-size: 11px;
+  }
+
+  .prototype-dock,
+  .floating-whatsapp {
+    display: none !important;
+  }
+
   .intro-photo { min-height: 300px; }
   .intro-highlights { grid-template-columns: 1fr; }
   .intro-highlights article strong { font-size: 24px; }
@@ -169,4 +309,9 @@
     align-items: flex-start;
   }
   .footer-wordmark strong { font-size: 30px; }
+}
+
+@media (max-width: 360px) {
+  .hero-brand h1 { font-size: 46px; }
+  .hero-lead { font-size: 13.5px; }
 }
