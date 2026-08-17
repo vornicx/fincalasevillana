@@ -315,3 +315,224 @@
   .hero-brand h1 { font-size: 46px; }
   .hero-lead { font-size: 13.5px; }
 }
+
+/* Final responsive QA fixes — these intentionally win the cascade. */
+.facts {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  padding-top: 0 !important;
+}
+.fact,
+.fact:nth-child(2),
+.fact:nth-child(even) {
+  min-height: 190px !important;
+  padding: 28px 30px !important;
+  border: 1px solid var(--line) !important;
+  background: rgba(255,255,255,.28) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
+}
+.fact strong {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(38px, 3.1vw, 54px) !important;
+  line-height: .94 !important;
+}
+.fact span {
+  margin: 0 !important;
+  font-size: 9px !important;
+  line-height: 1.5 !important;
+  letter-spacing: .12em !important;
+}
+
+@media (max-width: 780px) {
+  .media-feature {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .media-photo-main {
+    width: 100% !important;
+    min-height: 430px !important;
+    background-position: center 60% !important;
+  }
+  .media-note {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 22px 0 0 !important;
+  }
+  .media-note span { padding-bottom: 11px !important; }
+  .media-note p {
+    width: 100% !important;
+    max-width: 335px !important;
+    margin: 18px 0 0 !important;
+    font-size: 27px !important;
+    line-height: 1.16 !important;
+  }
+
+  .facts {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .fact,
+  .fact:nth-child(2),
+  .fact:nth-child(even) {
+    min-height: 148px !important;
+    padding: 22px 24px !important;
+    border: 1px solid var(--line) !important;
+  }
+  .fact strong { font-size: 36px !important; }
+  .fact span { font-size: 8.5px !important; }
+
+  .spaces-inner {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+  .spaces-heading {
+    max-width: 100% !important;
+    margin-bottom: 38px !important;
+  }
+  .spaces-heading h2 {
+    max-width: 335px !important;
+    font-size: 49px !important;
+    line-height: .94 !important;
+  }
+  .spaces-heading .eyebrow {
+    max-width: 330px !important;
+    line-height: 1.65 !important;
+  }
+  .space-showcase {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas: "main" "specs" "night" !important;
+    gap: 28px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .space-frame-main {
+    grid-area: main !important;
+    width: 100% !important;
+    min-height: 455px !important;
+  }
+  .space-frame-night {
+    grid-area: night !important;
+    width: 100% !important;
+    min-height: 310px !important;
+    margin-top: 6px !important;
+  }
+  .space-image-garden { background-position: center 60% !important; }
+  .space-image-night { background-position: center 56% !important; }
+  .space-frame figcaption {
+    inset: auto 20px 22px !important;
+    max-width: calc(100% - 40px) !important;
+  }
+  .space-frame figcaption strong {
+    max-width: 300px !important;
+    font-size: 30px !important;
+    line-height: 1.02 !important;
+  }
+  .space-specs {
+    grid-area: specs !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(255,255,255,.18) !important;
+    display: block !important;
+  }
+  .space-spec {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 22px 0 23px !important;
+  }
+  .space-spec span { margin-bottom: 8px !important; }
+  .space-spec strong {
+    display: block !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    font-size: 23px !important;
+    line-height: 1.18 !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+  .space-specs .button {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 50px !important;
+    margin-top: 26px !important;
+    padding: 0 20px !important;
+    white-space: nowrap !important;
+    font-size: 10.5px !important;
+    line-height: 1 !important;
+  }
+
+  .location {
+    display: block !important;
+    min-height: 0 !important;
+  }
+  .location-copy {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 68px 20px 64px !important;
+  }
+  .location-copy h2 {
+    max-width: 330px !important;
+    margin-bottom: 34px !important;
+    font-size: 44px !important;
+  }
+  .location-details {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+  .location-details > div {
+    grid-template-columns: 82px minmax(0, 1fr) !important;
+    gap: 12px !important;
+  }
+  .location-details strong,
+  .location-details a {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+  }
+  .location-copy .button {
+    width: auto !important;
+    min-height: 50px !important;
+    padding: 0 20px !important;
+    white-space: nowrap !important;
+  }
+  .location-map { display: none !important; }
+
+  .footer {
+    padding: 62px 20px 22px !important;
+  }
+  .footer-top {
+    align-items: flex-start !important;
+    gap: 30px !important;
+    padding-bottom: 44px !important;
+  }
+  .footer-wordmark { align-items: flex-start !important; }
+  .footer-wordmark strong {
+    font-size: 31px !important;
+    line-height: 1 !important;
+  }
+  .footer-top > p {
+    max-width: 300px !important;
+    text-align: left !important;
+    font-size: 27px !important;
+  }
+  .footer-nav { padding: 38px 0 42px !important; }
+}
+
+@media (max-width: 360px) {
+  .spaces-heading h2 { font-size: 45px !important; }
+  .space-spec strong { font-size: 21px !important; }
+  .media-note p { font-size: 25px !important; }
+}
