@@ -431,3 +431,854 @@
   .hero-brand h1 { font-size: 48px !important; }
   .hero-lead { max-width: 312px !important; font-size: 13px !important; }
 }
+
+/* Craft pass — tighter proportions, deliberate crops, and stronger section rhythm. */
+.section {
+  padding-top: clamp(104px, 8.4vw, 148px);
+  padding-bottom: clamp(104px, 8.4vw, 148px);
+}
+.section-label {
+  margin-bottom: clamp(44px, 4.7vw, 72px);
+}
+
+/* Hero: keep the brand dominant, but give image and copy more air. */
+.hero-brand .hero-copy {
+  width: min(760px, 64vw) !important;
+}
+.hero-brand h1 {
+  max-width: 690px;
+  margin-bottom: 22px;
+  font-size: clamp(72px, 7.15vw, 116px);
+  line-height: .855;
+  letter-spacing: -.05em;
+}
+.hero-lead {
+  width: 100%;
+  max-width: 585px;
+  margin-bottom: 30px;
+  font-size: clamp(15px, 1.05vw, 17px);
+  line-height: 1.64;
+}
+.hero-actions .button {
+  min-height: 54px;
+  padding-inline: 25px;
+}
+.hero-photo {
+  background-position: 52% 60%;
+}
+
+/* La finca: image-led composition, with highlights that feel editorial rather than boxed. */
+.statement-grid {
+  grid-template-columns: minmax(0, 1.06fr) minmax(360px, .72fr);
+  gap: clamp(64px, 8vw, 132px);
+}
+.statement-title {
+  max-width: 820px;
+}
+.statement-copy {
+  max-width: 540px;
+  padding-top: clamp(46px, 5vw, 78px);
+}
+.statement-copy .lead {
+  max-width: 520px;
+}
+.enhanced-grid {
+  margin-bottom: clamp(52px, 5vw, 72px) !important;
+}
+.intro-visual {
+  grid-template-columns: minmax(0, 1.16fr) minmax(390px, .84fr) !important;
+  gap: clamp(26px, 2.8vw, 44px) !important;
+}
+.intro-photo-card {
+  position: relative;
+  min-height: clamp(590px, 51vw, 720px);
+  overflow: hidden;
+  border: 0 !important;
+  background: #17271f !important;
+}
+.intro-photo {
+  position: absolute;
+  inset: 0;
+  min-height: 0 !important;
+  background-position: center 56%;
+  transform: scale(1.01);
+}
+.intro-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,14,10,.02) 35%, rgba(7,14,10,.68) 100%);
+  pointer-events: none;
+}
+.intro-photo-copy {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 650px;
+  padding: clamp(28px, 3vw, 42px) clamp(28px, 3.2vw, 46px) clamp(30px, 3.2vw, 46px) !important;
+  color: white;
+}
+.intro-photo-copy span {
+  margin-bottom: 12px;
+  color: rgba(255,255,255,.58);
+  opacity: 1;
+}
+.intro-photo-copy strong {
+  max-width: 560px;
+  font-size: clamp(30px, 2.6vw, 40px) !important;
+  line-height: 1.08;
+}
+.intro-highlights {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 !important;
+  align-content: stretch;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.intro-highlights article {
+  min-height: 230px;
+  padding: clamp(26px, 2.5vw, 36px) !important;
+  border: 0 !important;
+  border-right: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: transparent !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.intro-highlights article span {
+  margin-bottom: auto;
+  padding-bottom: 34px;
+  font-size: 15px;
+}
+.intro-highlights article strong {
+  max-width: 250px;
+  margin-bottom: 11px;
+  font-size: clamp(23px, 1.8vw, 29px) !important;
+  line-height: 1.06;
+}
+.intro-highlights article p {
+  max-width: 250px;
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+/* Transition image + note: control the crop and keep the note anchored to the image. */
+.media-feature {
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 292px);
+  gap: clamp(24px, 2.5vw, 38px);
+}
+.media-photo-main {
+  min-height: clamp(600px, 58vw, 820px);
+  background-position: center 61%;
+}
+.media-note {
+  padding: 0 8px clamp(28px, 3.3vw, 48px) 4px;
+}
+.media-note p {
+  max-width: 270px;
+  margin-top: 20px;
+  font-size: clamp(22px, 1.8vw, 27px);
+  line-height: 1.28;
+}
+
+/* Facts: use the whole component height instead of crowding both pieces at the top. */
+.facts {
+  padding-bottom: clamp(88px, 7.5vw, 122px);
+}
+.fact {
+  min-height: 184px;
+  padding: 25px 28px 27px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+}
+.fact strong {
+  max-width: none;
+  font-size: clamp(37px, 3vw, 54px);
+  line-height: .96;
+}
+.fact span {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.55;
+  letter-spacing: .105em;
+}
+
+/* Celebrations: cleaner baselines and more intentional hierarchy. */
+.events-heading {
+  width: min(830px, 100%);
+  margin-bottom: clamp(62px, 6vw, 88px);
+}
+.event-row {
+  grid-template-columns: 58px minmax(0, 1.38fr) minmax(150px, .68fr) 112px;
+  gap: clamp(18px, 2.2vw, 34px);
+  min-height: 126px;
+  padding: 32px 0;
+}
+.event-index {
+  align-self: start;
+  padding-top: 8px;
+  font-size: 15px;
+}
+.event-name h3 {
+  margin-bottom: 7px;
+  font-size: clamp(32px, 2.7vw, 45px);
+  line-height: 1;
+}
+.event-name p {
+  max-width: 470px;
+  font-size: 12.5px;
+  line-height: 1.58;
+}
+.event-detail {
+  justify-self: start;
+  max-width: 170px;
+  line-height: 1.45;
+}
+.event-row > a {
+  justify-self: end;
+  gap: 10px;
+}
+
+/* Spaces: image captions now sit as part of the photography instead of floating at opposite corners. */
+.spaces-inner {
+  padding-top: clamp(104px, 8.5vw, 138px);
+  padding-bottom: clamp(104px, 8.5vw, 138px);
+}
+.spaces-heading {
+  max-width: 850px;
+  margin-bottom: clamp(62px, 6.4vw, 92px);
+}
+.space-showcase {
+  grid-template-columns: minmax(0, 1.27fr) minmax(330px, .73fr);
+  gap: clamp(28px, 3vw, 46px);
+}
+.space-frame-main {
+  min-height: clamp(620px, 55vw, 760px);
+}
+.space-frame-night {
+  min-height: clamp(390px, 35vw, 500px);
+  margin-top: clamp(36px, 4vw, 58px);
+}
+.space-image-garden {
+  background-position: center 61%;
+}
+.space-image-night {
+  background-position: center 56%;
+}
+.space-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,14,10,.02) 40%, rgba(7,14,10,.54) 100%);
+  pointer-events: none;
+}
+.space-frame figcaption {
+  z-index: 3;
+  inset: auto clamp(28px, 3vw, 44px) clamp(28px, 3vw, 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.space-frame figcaption span {
+  margin: 0;
+  font-size: 8px;
+  letter-spacing: .2em;
+}
+.space-frame figcaption strong {
+  max-width: 510px;
+  text-align: left;
+  font-size: clamp(32px, 3.15vw, 48px);
+  line-height: 1.02;
+}
+.space-specs {
+  padding-bottom: 2px;
+}
+.space-spec {
+  padding: clamp(22px, 2.2vw, 29px) 0 clamp(24px, 2.3vw, 31px);
+}
+.space-spec span {
+  margin-bottom: 10px;
+}
+.space-spec strong {
+  max-width: 360px;
+  font-size: clamp(19px, 1.55vw, 23px);
+  line-height: 1.28;
+}
+.space-specs .button {
+  margin-top: clamp(32px, 4vw, 52px);
+  transform: none;
+}
+
+/* Editorial pause: make all three columns feel related, not like an image + quote + random card. */
+.editorial-split {
+  grid-template-columns: minmax(0, 1.12fr) minmax(310px, .72fr) minmax(240px, .46fr) !important;
+  gap: clamp(34px, 4.2vw, 68px) !important;
+  align-items: stretch !important;
+}
+.editorial-photo {
+  min-height: clamp(620px, 51vw, 740px);
+  background-position: center 59%;
+}
+.editorial-copy {
+  max-width: 500px;
+  align-self: center;
+  padding-block: 28px;
+}
+.quote-mark {
+  margin-bottom: -2px;
+  font-size: 72px;
+}
+.editorial blockquote {
+  margin-bottom: 26px;
+  font-size: clamp(33px, 3vw, 47px);
+  line-height: 1.08;
+}
+.editorial-copy p {
+  max-width: 390px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.editorial-sidecard {
+  align-self: end;
+  min-height: 240px;
+  padding: 28px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--line) !important;
+  background: transparent !important;
+}
+.editorial-sidecard strong {
+  margin: 14px 0 16px;
+  font-size: clamp(28px, 2.3vw, 36px) !important;
+}
+.editorial-sidecard p {
+  max-width: 290px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* Availability: tighten the intro/form relationship and refine controls. */
+.availability {
+  grid-template-columns: minmax(320px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(68px, 7.5vw, 116px);
+  align-items: start;
+}
+.availability h2 {
+  font-size: clamp(50px, 5.15vw, 78px);
+  line-height: .94;
+}
+.availability-intro > p:not(.eyebrow) {
+  max-width: 430px;
+  margin-top: 26px;
+  font-size: 14px;
+  line-height: 1.72;
+}
+.availability-contact {
+  max-width: 360px;
+  margin-top: 46px;
+}
+.form {
+  padding: clamp(34px, 3.6vw, 50px);
+  border: 1px solid rgba(23,32,25,.10);
+  background: rgba(247,244,238,.72);
+}
+.form-topline {
+  align-items: flex-end;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+.form-topline strong {
+  max-width: 350px;
+  text-align: right;
+  font-size: clamp(21px, 1.8vw, 26px) !important;
+}
+.form-grid {
+  column-gap: 30px;
+}
+.form label {
+  padding-bottom: 18px;
+  margin-bottom: 30px;
+}
+.form label > span {
+  margin-bottom: 12px;
+  font-size: 8.5px;
+}
+.form input,
+.form select,
+.form textarea {
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+.form textarea {
+  min-height: 82px;
+}
+.form-submit {
+  min-height: 56px;
+  margin-top: 2px;
+}
+.form-note {
+  margin-top: 14px;
+}
+
+/* Location + footer: a stronger close with better balance. */
+.location {
+  grid-template-columns: minmax(0, 1.2fr) minmax(390px, .8fr);
+  min-height: 700px;
+}
+.location-map,
+.location-map iframe {
+  min-height: 700px;
+}
+.location-copy {
+  padding: clamp(72px, 7vw, 108px) clamp(34px, 4.8vw, 72px);
+}
+.location-copy h2 {
+  margin-bottom: 44px;
+  font-size: clamp(48px, 5vw, 76px);
+}
+.location-details {
+  margin-bottom: 36px;
+}
+.location-details > div {
+  grid-template-columns: 96px 1fr;
+  padding: 18px 0;
+}
+.footer {
+  padding-top: clamp(80px, 7vw, 104px);
+}
+.footer-top {
+  align-items: flex-end;
+  padding-bottom: clamp(60px, 6vw, 82px);
+}
+.footer-wordmark strong {
+  font-size: clamp(34px, 3.2vw, 46px) !important;
+}
+.footer-top > p {
+  max-width: 520px;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.1;
+}
+.footer-nav {
+  width: min(690px, 100%);
+  gap: clamp(38px, 5vw, 70px);
+  padding: 54px 0 62px;
+}
+.footer-nav > div {
+  gap: 13px;
+}
+.footer-nav a {
+  font-size: 11.5px;
+}
+.footer-bottom {
+  padding-top: 18px;
+}
+
+@media (max-width: 1100px) {
+  .intro-visual {
+    grid-template-columns: 1fr !important;
+  }
+  .intro-photo-card {
+    min-height: 650px;
+  }
+  .intro-highlights article {
+    min-height: 210px;
+  }
+  .editorial-split {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .editorial-sidecard {
+    grid-column: 2;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 780px) {
+  .section {
+    padding-top: 76px !important;
+    padding-bottom: 76px !important;
+  }
+  .section-label {
+    margin-bottom: 38px !important;
+  }
+
+  .hero {
+    min-height: max(700px, 100svh) !important;
+    padding: 92px 20px 38px !important;
+  }
+  .hero-photo {
+    background-position: 55% 69% !important;
+    transform: scale(1.015) !important;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(6,11,8,.28) 0%, rgba(6,11,8,.08) 30%, rgba(6,11,8,.38) 59%, rgba(6,11,8,.93) 100%),
+      linear-gradient(90deg, rgba(5,11,7,.32) 0%, rgba(5,11,7,.04) 90%) !important;
+  }
+  .hero-brand .hero-copy {
+    max-width: 348px !important;
+  }
+  .hero-copy .eyebrow {
+    margin-bottom: 12px !important;
+  }
+  .hero-brand h1 {
+    max-width: 100% !important;
+    margin-bottom: 19px !important;
+    font-size: clamp(48px, 13.8vw, 56px) !important;
+    line-height: .875 !important;
+  }
+  .hero-brand h1 em {
+    white-space: nowrap;
+  }
+  .hero-lead {
+    max-width: 318px !important;
+    margin-bottom: 22px !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+  .hero-actions {
+    gap: 14px !important;
+  }
+  .hero-actions .button {
+    min-height: 49px !important;
+    padding-inline: 21px !important;
+  }
+
+  .statement.section {
+    padding-top: 72px !important;
+  }
+  .statement-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .statement h2 {
+    max-width: 330px;
+    font-size: 41px !important;
+    line-height: .97 !important;
+  }
+  .statement-copy {
+    padding-top: 0 !important;
+  }
+  .statement-copy .lead {
+    max-width: 330px;
+    font-size: 17.5px !important;
+  }
+  .statement-copy > p:not(.lead) {
+    max-width: 335px;
+    font-size: 13px !important;
+  }
+  .enhanced-grid {
+    margin-bottom: 36px !important;
+  }
+  .intro-visual {
+    gap: 24px !important;
+  }
+  .intro-photo-card {
+    min-height: 405px !important;
+  }
+  .intro-photo {
+    background-position: center 60%;
+  }
+  .intro-photo-copy {
+    padding: 24px 22px 22px !important;
+  }
+  .intro-photo-copy strong {
+    max-width: 300px;
+    font-size: 27px !important;
+  }
+  .intro-highlights {
+    grid-template-columns: 1fr !important;
+    border-left: 0;
+  }
+  .intro-highlights article {
+    min-height: 0;
+    padding: 20px 0 22px !important;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    border-right: 0 !important;
+  }
+  .intro-highlights article span {
+    grid-row: 1 / -1;
+    margin: 2px 0 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  .intro-highlights article strong {
+    max-width: 270px;
+    margin-bottom: 8px;
+    font-size: 24px !important;
+  }
+  .intro-highlights article p {
+    max-width: 270px;
+    font-size: 11.5px;
+  }
+
+  .media-feature {
+    gap: 18px;
+  }
+  .media-photo-main {
+    min-height: 455px !important;
+    background-position: center 60%;
+  }
+  .media-note {
+    max-width: 330px;
+    padding: 0 0 8px;
+  }
+  .media-note p {
+    max-width: 315px;
+    font-size: 22px;
+  }
+
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    padding-bottom: 72px !important;
+  }
+  .fact,
+  .fact:nth-child(2) {
+    min-height: 138px !important;
+    padding: 20px 16px 20px 0;
+    border-right: 1px solid var(--line);
+  }
+  .fact:nth-child(even) {
+    padding-left: 18px;
+    padding-right: 0;
+    border-right: 0;
+  }
+  .fact strong {
+    font-size: 32px !important;
+  }
+  .fact span {
+    font-size: 8px;
+    line-height: 1.45;
+  }
+
+  .events-heading {
+    margin-bottom: 48px;
+  }
+  .event-row {
+    grid-template-columns: 30px minmax(0, 1fr) 18px !important;
+    gap: 10px !important;
+    min-height: 112px;
+    padding: 23px 0 !important;
+  }
+  .event-index {
+    padding-top: 4px;
+    font-size: 13px;
+  }
+  .event-name h3 {
+    margin-bottom: 6px;
+    font-size: 29px !important;
+  }
+  .event-name p {
+    display: block !important;
+    max-width: 245px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .event-row > a {
+    align-self: center;
+    justify-self: end;
+    width: 16px;
+    overflow: visible;
+  }
+
+  .spaces-inner {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+  .spaces-heading {
+    margin-bottom: 48px;
+  }
+  .space-showcase {
+    gap: 24px;
+  }
+  .space-frame-main {
+    min-height: 490px !important;
+  }
+  .space-frame-night {
+    min-height: 315px !important;
+    margin-top: 14px;
+  }
+  .space-image-garden {
+    background-position: center 61%;
+  }
+  .space-image-night {
+    background-position: center 57%;
+  }
+  .space-frame figcaption {
+    inset: auto 20px 22px;
+    gap: 8px;
+  }
+  .space-frame figcaption strong {
+    max-width: 290px;
+    font-size: 29px;
+  }
+  .space-specs {
+    padding-top: 0;
+  }
+  .space-spec {
+    padding: 19px 0 21px;
+  }
+  .space-spec strong {
+    max-width: 300px;
+    font-size: 18.5px;
+  }
+  .space-specs .button {
+    margin-top: 24px;
+  }
+
+  .editorial-split {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+  .editorial-photo {
+    min-height: 440px !important;
+    background-position: center 60%;
+  }
+  .editorial-copy {
+    max-width: 335px;
+    padding: 0;
+  }
+  .quote-mark {
+    margin-bottom: -6px;
+    font-size: 60px;
+  }
+  .editorial blockquote {
+    margin-bottom: 22px;
+    font-size: 34px !important;
+    line-height: 1.08;
+  }
+  .editorial-copy p {
+    max-width: 320px;
+    font-size: 12.5px;
+  }
+  .editorial-sidecard {
+    grid-column: auto;
+    min-height: auto;
+    padding-top: 22px !important;
+  }
+  .editorial-sidecard strong {
+    font-size: 28px !important;
+  }
+
+  .availability {
+    grid-template-columns: 1fr !important;
+    gap: 42px !important;
+  }
+  .availability h2 {
+    max-width: 330px;
+    font-size: 43px !important;
+  }
+  .availability-intro > p:not(.eyebrow) {
+    max-width: 330px;
+    margin-top: 22px;
+    font-size: 13px;
+  }
+  .availability-contact {
+    max-width: 330px;
+    margin-top: 34px;
+  }
+  .form {
+    margin: 0 -20px -76px !important;
+    padding: 32px 20px 40px !important;
+    border-left: 0;
+    border-right: 0;
+  }
+  .form-topline {
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+  }
+  .form-topline strong {
+    max-width: 290px;
+    text-align: left;
+    font-size: 21px !important;
+  }
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .form label {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+  .form .span-2 {
+    grid-column: auto;
+  }
+  .form input,
+  .form select,
+  .form textarea {
+    font-size: 14px;
+  }
+  .form-submit {
+    min-height: 54px;
+  }
+
+  .location {
+    grid-template-columns: 1fr !important;
+    min-height: auto;
+  }
+  .location-copy {
+    padding: 70px 20px 62px !important;
+  }
+  .location-copy h2 {
+    max-width: 320px;
+    margin-bottom: 38px;
+    font-size: 43px !important;
+  }
+  .location-details > div {
+    grid-template-columns: 88px 1fr;
+    gap: 14px;
+    padding: 16px 0;
+  }
+  .location-map,
+  .location-map iframe {
+    min-height: 390px !important;
+  }
+
+  .footer {
+    padding-top: 70px !important;
+  }
+  .footer-top {
+    gap: 34px;
+    padding-bottom: 48px;
+  }
+  .footer-wordmark strong {
+    font-size: 33px !important;
+  }
+  .footer-top > p {
+    max-width: 320px;
+    font-size: 28px;
+    line-height: 1.12;
+  }
+  .footer-nav {
+    gap: 30px 24px;
+    padding: 44px 0 50px;
+  }
+  .footer-bottom {
+    padding-top: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-brand h1 {
+    font-size: 47px !important;
+  }
+  .facts {
+    grid-template-columns: 1fr !important;
+  }
+  .fact,
+  .fact:nth-child(2),
+  .fact:nth-child(even) {
+    min-height: 116px !important;
+    padding: 18px 0 !important;
+    border-right: 0 !important;
+  }
+}
