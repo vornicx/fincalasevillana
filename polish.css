@@ -210,3 +210,224 @@
   .prototype-dock > a { min-height: 36px; padding: 0 10px; }
   .floating-whatsapp { right: 10px; bottom: 10px; }
 }
+
+/* Final mobile detail pass — clean iOS rendering and reduce demo chrome. */
+.link-arrow > span,
+.event-row > a > span,
+.button > span,
+.prototype-dock > a > span,
+.floating-whatsapp b {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  overflow: visible;
+  font-size: 0 !important;
+  line-height: 0;
+  color: currentColor;
+}
+
+.link-arrow > span::before,
+.event-row > a > span::before,
+.button > span::before,
+.prototype-dock > a > span::before,
+.floating-whatsapp b::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 5.5px;
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: center;
+}
+
+.link-arrow > span::after,
+.event-row > a > span::after,
+.button > span::after,
+.prototype-dock > a > span::after,
+.floating-whatsapp b::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+.link-arrow > span { transform: rotate(45deg); }
+.event-row > a > span,
+.button > span,
+.prototype-dock > a > span,
+.floating-whatsapp b { transform: rotate(-45deg); }
+.link-arrow:hover > span { transform: rotate(45deg) translate(2px, 2px); }
+.button:hover > span,
+.event-row > a:hover > span,
+.prototype-dock > a:hover > span { transform: rotate(-45deg) translate(2px, 2px); }
+
+@media (max-width: 780px) {
+  .header {
+    height: 68px !important;
+    padding: 0 17px 0 20px !important;
+    border-bottom-color: rgba(255,255,255,.10) !important;
+  }
+  .header:not(.scrolled) {
+    background: linear-gradient(180deg, rgba(5,10,7,.22), rgba(5,10,7,0)) !important;
+  }
+  .header.scrolled {
+    height: 62px !important;
+    background: rgba(241,238,231,.97) !important;
+    border-color: rgba(23,32,25,.08) !important;
+    box-shadow: 0 1px 0 rgba(23,32,25,.025) !important;
+  }
+  .wordmark strong {
+    font-size: 19px !important;
+    letter-spacing: -.035em !important;
+  }
+  .nav-toggle {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 8px !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    margin: 6px auto !important;
+  }
+  .nav {
+    inset: 0 !important;
+    height: 100dvh !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-108%) !important;
+  }
+  .menu-open .nav {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  .hero {
+    min-height: max(720px, 100svh) !important;
+    padding: 98px 20px 44px !important;
+  }
+  .hero-photo {
+    background-position: 58% 72% !important;
+    transform: scale(1.02) !important;
+    animation: none !important;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(6,11,8,.34) 0%, rgba(6,11,8,.10) 29%, rgba(6,11,8,.42) 61%, rgba(6,11,8,.92) 100%),
+      linear-gradient(90deg, rgba(5,11,7,.36) 0%, rgba(5,11,7,.06) 92%) !important;
+  }
+  .hero-brand .hero-copy {
+    width: 100% !important;
+    max-width: 355px !important;
+  }
+  .hero-copy .eyebrow {
+    margin-bottom: 13px !important;
+    font-size: 8.5px !important;
+    letter-spacing: .25em !important;
+  }
+  .hero-kicker {
+    display: none !important;
+  }
+  .hero-branding {
+    margin-bottom: 0 !important;
+  }
+  .hero-brand h1 {
+    margin: 0 0 21px !important;
+    font-size: clamp(50px, 14.5vw, 61px) !important;
+    line-height: .865 !important;
+    letter-spacing: -.047em !important;
+  }
+  .hero-lead {
+    max-width: 326px !important;
+    margin-bottom: 24px !important;
+    font-size: 13.5px !important;
+    line-height: 1.62 !important;
+    color: rgba(255,255,255,.82) !important;
+  }
+  .hero-actions {
+    gap: 16px !important;
+  }
+  .hero-actions .button {
+    min-height: 50px !important;
+    padding: 0 22px !important;
+    font-size: 10.5px !important;
+  }
+  .hero-actions .link-arrow {
+    gap: 11px !important;
+    padding-bottom: 6px !important;
+    font-size: 10.5px !important;
+  }
+  .hero-stat,
+  .hero-scroll,
+  .prototype-dock,
+  .floating-whatsapp {
+    display: none !important;
+  }
+
+  .statement.section {
+    padding-top: 76px !important;
+  }
+  .statement .section-label {
+    margin-bottom: 38px !important;
+  }
+  .enhanced-grid {
+    margin-bottom: 34px !important;
+  }
+  .statement-grid {
+    gap: 28px !important;
+  }
+  .statement h2 {
+    font-size: 44px !important;
+    line-height: .96 !important;
+  }
+  .statement-copy .lead {
+    font-size: 18px !important;
+    line-height: 1.48 !important;
+  }
+  .statement-copy > p:not(.lead) {
+    font-size: 13.5px !important;
+    line-height: 1.72 !important;
+  }
+  .intro-visual {
+    gap: 18px !important;
+  }
+  .intro-photo-card {
+    border: 0 !important;
+    background: transparent !important;
+  }
+  .intro-photo {
+    min-height: 330px !important;
+  }
+  .intro-photo-copy {
+    padding: 18px 0 8px !important;
+  }
+  .intro-photo-copy strong {
+    font-size: 28px !important;
+  }
+  .intro-highlights {
+    gap: 0 !important;
+  }
+  .intro-highlights article {
+    padding: 20px 0 22px !important;
+    border: 0 !important;
+    border-top: 1px solid var(--line) !important;
+    background: transparent !important;
+  }
+  .intro-highlights article strong {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-brand h1 { font-size: 48px !important; }
+  .hero-lead { max-width: 312px !important; font-size: 13px !important; }
+}
