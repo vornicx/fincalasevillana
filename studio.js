@@ -4,6 +4,27 @@ const pageTitle = document.querySelector('[data-page-title]');
 const sidebar = document.querySelector('.sidebar');
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 
+const now = new Date();
+const overviewDate = document.querySelector('#overview .page-intro > div > p');
+const overviewGreeting = document.querySelector('#overview .page-intro > div > h1');
+const nextEventLabel = document.querySelector('.next-event .panel-head strong');
+
+if (overviewDate) {
+  const formatted = new Intl.DateTimeFormat('es-ES', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long'
+  }).format(now);
+  overviewDate.textContent = formatted.charAt(0).toUpperCase() + formatted.slice(1);
+}
+
+if (overviewGreeting) {
+  const hour = now.getHours();
+  overviewGreeting.textContent = hour < 13 ? 'Buenos días.' : hour < 20 ? 'Buenas tardes.' : 'Buenas noches.';
+}
+
+if (nextEventLabel) nextEventLabel.textContent = 'Sábado · 22 ago';
+
 function showView(id) {
   views.forEach((view) => view.classList.toggle('active', view.id === id));
   navButtons.forEach((button) => button.classList.toggle('active', button.dataset.view === id));
